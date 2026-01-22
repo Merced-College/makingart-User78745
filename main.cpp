@@ -1,3 +1,5 @@
+//Yen Her
+//CPSC-25
 #include <iostream>
 #include <fstream>
 
@@ -45,7 +47,7 @@ int main() {
 
     // Color 
     out << "    let color = iter | (iter << 8);\n";
-    out << "    data[i++] = (color >> 16) & 255;\n";
+    out << "    data[i++] = " << red[0] << "\n"; //(color >> 16) & 255;\n";
     out << "    data[i++] = (color >> 8) & 255;\n";
     out << "    data[i++] = color & 255;\n";
     out << "    data[i++] = 255;\n";   // alpha
@@ -53,8 +55,8 @@ int main() {
     out << "}\n";
 
     /*
-    Lines 40-46 are the core logic of how color works in the program.
-    It works by...
+    The above lines are the core logic of how color works in the program.
+    It works by shifting bits to get the red, green, and blue components from a single integer color value.
     */
 
     out << "ctx.putImageData(img, 0, 0);\n";

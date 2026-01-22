@@ -1,3 +1,6 @@
+Yen Her
+01/22/2026
+
 Part 0:
 1)What do the two nested for loops over x and y represent in the program?
 I believe the two nested for loops over x and y represent the pixels in the program. One representing pixels on the x-axis and the other representing pixels on the y-axis in the image.
