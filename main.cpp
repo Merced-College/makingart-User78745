@@ -1,6 +1,12 @@
 #include <iostream>
 #include <fstream>
 
+const int PALETTE_SIZE = 5;
+
+int red[PALETTE_SIZE]   = { 66, 25,  9,   0, 255 };
+int green[PALETTE_SIZE] = { 30,  7,  1,   0, 255 };
+int blue[PALETTE_SIZE]  = { 15, 26, 47, 100, 255 };
+
 int main() {
     const int WIDTH = 800;
     const int HEIGHT = 600;
@@ -12,6 +18,7 @@ int main() {
         return 1;
     }
 
+    // making the canvas in HTML
     out << "<!DOCTYPE html>\n<html>\n<body>\n";
     out << "<canvas id='c' width='" << WIDTH << "' height='" << HEIGHT << "'></canvas>\n";
     out << "<script>\n";
@@ -44,6 +51,11 @@ int main() {
     out << "    data[i++] = 255;\n";   // alpha
     out << "  }\n";
     out << "}\n";
+
+    /*
+    Lines 40-46 are the core logic of how color works in the program.
+    It works by...
+    */
 
     out << "ctx.putImageData(img, 0, 0);\n";
     out << "</script>\n</body>\n</html>\n";
